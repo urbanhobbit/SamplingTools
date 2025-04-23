@@ -1,0 +1,18 @@
+columns:
+  nuts1: NUTS1KODU
+  nuts2: NUTS2KODU
+  nuts3: NUTS3KODU
+  province: IL
+  district: ILCE
+  status: ILCE_STATU
+  population: NUFUS2023
+  neighborhood_code: MAH_KOY_KODU
+  neighborhood_status: STATU
+
+special_adjustments:
+  - stratum: TR61
+    condition: IL == 'Isparta' and ILCE == 'Merkez' and STATU_CAT == 'M&D'
+    action: add_population
+  - stratum: TRC13
+    condition: IL == 'Adıyaman' and ILCE == 'Merkez' and STATU_CAT == 'M&D'
+    action: add_population
